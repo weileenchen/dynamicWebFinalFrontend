@@ -29,6 +29,7 @@ function App() {
   const [errors, setErrors] = useState();
 
   useEffect(() => {
+    document.title = "finstagram";
     initializeApp(FirebaseConfig);
     setAppInitialized(true);
   }, []);
