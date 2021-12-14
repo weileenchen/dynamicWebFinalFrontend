@@ -31,34 +31,12 @@ function CreateUser({ setErrors, setLoggedIn, setUserInformation }) {
           console.warn({ error, errorCode, errorMessage });
           setErrors(errorMessage);
         });
-
-      //   user
-      //     .updateProfile({
-      //       displayName: displayName,
-      //     })
-      //     .then(function () {
-      //       setLoggedIn(true);
-      //       setUserInformation({
-      //         email: user.email,
-      //         displayName: user.displayName,
-      //         uid: user.uid,
-      //         accessToke: user.accessToken,
-      //       });
-      //     });
-      // })
-      // .catch((error) => {
-      //   const errorCode = error.code;
-      //   const errorMessage = error.message;
-      //   console.warn({ error, errorCode, errorMessage });
-      //   setErrors(errorMessage);
-      // });
     },
     [setErrors, setLoggedIn, setUserInformation]
   );
 
   return (
-    <div className="PageWrapper">
-      <h1>Create User</h1>
+    <div className="PageWrapper Page">
       <CreateUserForm signUpUser={signUpUser} />
     </div>
   );

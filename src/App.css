@@ -12,8 +12,13 @@
 }
 
 .HeaderWrapper {
-  border-bottom: 1px solid;
-  padding: 5px 0;
+  background-color: lavender;
+  border-bottom: 1px solid lightgray;
+  padding: 20px 0;
+}
+
+.Header > h1 {
+  font-size: 30px;
 }
 
 .Header nav a {
@@ -28,25 +33,87 @@
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  margin: 20px;
 }
 
 .Form input {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 10px 5px;
 }
 
+.Page {
+  margin-top: 20px;
+}
+
 .PostCard {
-  border: 1px solid;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  max-width: 700px;
   display: flex;
+  flex-direction: column;
   margin: 20px 0;
   padding: 10px;
 }
 
-.PostCardImage {
-  flex-basis: 50%;
-}
-
 .PostCardText {
   flex-basis: 50%;
-  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.PostTitle {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.PostTitle a {
+  text-decoration: none;
+}
+
+.LogOutButton {
+  background: none;
+  border: none;
+  color: black;
+  padding-left: 10px;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+}
+
+.Posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UserPosts {
+  display: flex;
+  flex-direction: row;
+}
+
+.UserPosts > div {
+  max-width: 350px;
+  margin: 15px;
+}
+
+.ViewPostButton {
+  padding: 5px 0;
+  border-radius: 15px;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.PostMessage {
+  padding: 10px 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }

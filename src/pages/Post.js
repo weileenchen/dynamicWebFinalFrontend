@@ -21,8 +21,8 @@ function Post() {
   }, [id]);
 
   return (
-    <div className="PageWrapper">
-      <h1>Post</h1>
+    <div className="PageWrapper Page">
+      <h1>post</h1>
       <PostCard post={singlePost} />
     </div>
   );

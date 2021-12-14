@@ -3,19 +3,19 @@ import React from "react";
 function CreateUserForm({ signUpUser }) {
   return (
     <div>
-      <h2>Create User Form</h2>
+      <h1>create profile</h1>
       <div className="Form">
         <form onSubmit={(e) => signUpUser(e)}>
-          <label htmlFor="displayName">Name</label>
-          <input type="text" name="displayName" placeholder="Enter Name" />
+          <label htmlFor="displayName">name</label>
+          <input type="text" name="displayName" placeholder="enter name" />
 
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" placeholder="Enter Email" />
+          <label htmlFor="email">email</label>
+          <input type="email" name="email" placeholder="enter email" />
 
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">password</label>
           <input type="password" name="password" placeholder="*****" />
 
-          <button type="submit">Create User</button>
+          <button type="submit">sign up</button>
         </form>
       </div>
     </div>

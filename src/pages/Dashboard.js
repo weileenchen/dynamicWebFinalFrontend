@@ -3,7 +3,7 @@ import axios from "axios";
 import PostCard from "../components/PostCard";
 import { baseUrl } from "../App";
 
-function Dashboard() {
+function Dashboard({ userInformation }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,11 +18,13 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="PageWrapper">
-      <h1>Dashboard</h1>
-      {posts.map((post, i) => (
-        <PostCard post={post} key={i} />
-      ))}
+    <div className="PageWrapper Page">
+      <h1>timeline</h1>
+      <div className="Posts">
+        {posts.map((post, i) => (
+          <PostCard post={post} key={i} />
+        ))}
+      </div>
     </div>
   );
 }

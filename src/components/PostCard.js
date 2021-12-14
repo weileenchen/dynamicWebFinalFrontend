@@ -2,20 +2,26 @@ import React from "react";
 
 function PostCard({ post }) {
   return (
-    <header className="PostCard">
+    <div className="PostCard">
+      <div className="PostTitle">
+        <a href={`/user/${post.userId}`}>{post.userId}</a>
+      </div>
       <div className="PostCardImage">
         <img src={post.imageSrc} alt={post.imageAlt} />
       </div>
       <div className="PostCardText">
-        <p>{post.userMessage}</p>
-        <p>
-          Posted by: <a href={`/user/${post.id}`}>{post.userName}</a>
-        </p>
-        <p>
-          <a href={`/post/${post.id}`}>View Post</a>
-        </p>
+        <div className="PostMessage">
+          <b>caption:</b> "{post.postMessage}"
+        </div>
+        {post.id ? (
+          <div className="ViewPostButton">
+            <a href={`/post/${post.id}`}>view</a>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-    </header>
+    </div>
   );
 }
 

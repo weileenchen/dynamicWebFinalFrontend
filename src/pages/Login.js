@@ -33,8 +33,7 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
     [setErrors, setLoggedIn, setUserInformation]
   );
   return (
-    <div className="PageWrapper">
-      <h1>Login</h1>
+    <div className="PageWrapper Page">
       <LoginForm loginUser={loginUser} />
     </div>
   );

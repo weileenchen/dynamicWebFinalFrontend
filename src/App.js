@@ -67,7 +67,11 @@ function App() {
 
   return (
     <>
-      <Header logout={logout} loggedIn={loggedIn} />
+      <Header
+        logout={logout}
+        loggedIn={loggedIn}
+        userInformation={userInformation}
+      />
       {errors && <p className="Error PageWrapper">{errors}</p>}
       <Router>
         <Routes>
@@ -119,18 +123,18 @@ function App() {
 
           <Route
             path="/user/:id"
-            element={
-              loggedIn ? (
-                <UserProfile userInformation={userInformation} />
-              ) : (
-                <Navigate to="/" />
-              )
-            }
+            element={loggedIn ? <UserProfile /> : <Navigate to="/" />}
           />
 
           <Route
             path="/"
-            element={loggedIn ? <Dashboard /> : <Navigate to="/login" />}
+            element={
+              loggedIn ? (
+                <Dashboard userInformation={userInformation} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
         </Routes>
       </Router>

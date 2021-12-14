@@ -3,23 +3,23 @@ import React from "react";
 function AddPostForm({ submitPost }) {
   return (
     <div>
-      <h2>Add Post Form</h2>
+      <h1>new post</h1>
       <div className="Form">
         <form onSubmit={(e) => submitPost(e)}>
-          <label htmlFor="postMessage">Post Message</label>
-          <input type="text" name="postMessage" placeholder="Enter message" />
+          <label htmlFor="postMessage">post message</label>
+          <input type="text" name="postMessage" placeholder="enter message" />
 
-          <label htmlFor="imageSrc">Image URL</label>
+          <label htmlFor="imageSrc">image url</label>
           <input
             type="text"
             name="imageSrc"
-            placeholder="https://wp.cghnyc.com/media/nyu-m-hero.jpg"
+            placeholder="insert link to image here"
           />
 
-          <label htmlFor="imageAlt">Image Alt Text</label>
-          <input type="text" name="imageAlt" placeholder="Alt text for email" />
+          <label htmlFor="imageAlt">image alt text</label>
+          <input type="text" name="imageAlt" placeholder="alternative text" />
 
-          <button type="submit">Create Post</button>
+          <button type="submit">create post</button>
         </form>
       </div>
     </div>

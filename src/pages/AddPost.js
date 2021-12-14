@@ -28,8 +28,7 @@ function AddPost({ userInformation }) {
   }
 
   return (
-    <div className="PageWrapper">
-      <h1>Add Post</h1>
+    <div className="PageWrapper Page">
       <AddPostForm submitPost={submitPost} />
     </div>
   );
