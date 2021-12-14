@@ -122,7 +122,7 @@ function App() {
           />
 
           <Route
-            path="/user/:id"
+            path="/user/:userName"
             element={loggedIn ? <UserProfile /> : <Navigate to="/" />}
           />
 

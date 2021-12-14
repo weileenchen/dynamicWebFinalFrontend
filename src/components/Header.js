@@ -1,13 +1,14 @@
 import React from "react";
 
 function Header({ logout, loggedIn, userInformation }) {
-
-  const profileRef = `/user/${userInformation.uid}`
+  const profileRef = `/user/${userInformation.displayName}`;
 
   return (
     <header className="HeaderWrapper">
       <div className="Header PageWrapper">
-        <h1>finstagram</h1>
+        <h1>
+          <a href="/">finstagram</a>
+        </h1>
         <nav>
           {!loggedIn && (
             <>

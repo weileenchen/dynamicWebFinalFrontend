@@ -4,7 +4,7 @@ function PostCard({ post }) {
   return (
     <div className="PostCard">
       <div className="PostTitle">
-        <a href={`/user/${post.userId}`}>{post.userId}</a>
+        <a href={`/user/${post.userName}`}>{post.userName}</a>
       </div>
       <div className="PostCardImage">
         <img src={post.imageSrc} alt={post.imageAlt} />
@@ -14,8 +14,10 @@ function PostCard({ post }) {
           <b>caption:</b> "{post.postMessage}"
         </div>
         {post.id ? (
-          <div className="ViewPostButton">
-            <a href={`/post/${post.id}`}>view</a>
+          <div className="ViewButtonDiv">
+            <a className="ViewButton" href={`/post/${post.id}`}>
+              view
+            </a>
           </div>
         ) : (
           <></>

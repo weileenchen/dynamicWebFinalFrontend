@@ -6,7 +6,7 @@ import { baseUrl } from "../App";
 
 function UserProfile() {
   const [posts, setPosts] = useState([]);
-  const { id } = useParams();
+  let { userName } = useParams();
 
   useEffect(() => {
     axios
@@ -18,12 +18,11 @@ function UserProfile() {
         console.warn(error);
       });
   }, []);
-
-  const filtered = posts.filter((post) => id === post.userId);
+  const filtered = posts.filter((post) => userName === post.userName);
 
   return (
     <div className="PageWrapper Page">
-      <h1>{id}'s posts</h1>
+      <h1>{userName}'s posts</h1>
       <div className="UserPosts">
         {filtered.map((post, i) => (
           <PostCard post={post} key={i} />

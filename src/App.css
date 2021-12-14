@@ -5,6 +5,10 @@
   padding-right: 25px;
 }
 
+.Page {
+  margin-top: 40px;
+}
+
 .Header {
   align-items: center;
   display: flex;
@@ -13,7 +17,6 @@
 
 .HeaderWrapper {
   background-color: lavender;
-  border-bottom: 1px solid lightgray;
   padding: 20px 0;
 }
 
@@ -37,34 +40,42 @@
 }
 
 .Form input {
+  border: 1px solid;
+  border-radius: 10px;
   margin-bottom: 20px;
   padding: 10px 5px;
 }
 
-.Page {
-  margin-top: 20px;
+.Form button {
+  border: 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+  width: 100%;
 }
 
 .PostCard {
   border: 1px solid lightgray;
   border-radius: 10px;
-  max-width: 700px;
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  max-width: 700px;
   padding: 10px;
 }
 
 .PostCardText {
-  flex-basis: 50%;
   display: flex;
+  flex-basis: 50%;
   flex-direction: column;
   justify-content: flex-end;
   text-align: left;
 }
 
 .PostTitle {
-  font-weight: bold;
+  font-weight: bolder;
   margin: 5px;
 }
 
@@ -76,32 +87,39 @@
   background: none;
   border: none;
   color: black;
-  padding-left: 10px;
-  font-family: arial, sans-serif;
   cursor: pointer;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  padding-left: 10px;
 }
 
 .Posts {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .UserPosts {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .UserPosts > div {
-  max-width: 350px;
   margin: 15px;
+  max-width: 350px;
 }
 
-.ViewPostButton {
-  padding: 5px 0;
+.ViewButtonDiv {
   border-radius: 15px;
   background-color: lightgray;
+  padding: 5px 0;
+  position: relative;
   text-align: center;
+}
+
+.ViewButton {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .PostMessage {
@@ -114,6 +132,6 @@ a {
 }
 
 a:visited {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
