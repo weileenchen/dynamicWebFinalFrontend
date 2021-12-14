@@ -19,7 +19,7 @@ import UserProfile from "./pages/UserProfile";
 import FirebaseConfig from "./components/FirebaseConfig";
 
 export const baseUrl =
-  `https://serene-hollows-61638.herokuapp.com/` || `http://localhost:4000`;
+  `https://serene-hollows-61638.herokuapp.com` || `http://localhost:4000`;
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
