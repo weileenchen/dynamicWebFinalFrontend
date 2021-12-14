@@ -22,7 +22,7 @@ function UserProfile() {
 
   return (
     <div className="PageWrapper Page">
-      <h1>{userName}'s posts</h1>
+      <h1>{userName}'s profile</h1>
       <div className="UserPosts">
         {filtered.map((post, i) => (
           <PostCard post={post} key={i} />
